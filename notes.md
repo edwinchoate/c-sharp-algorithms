@@ -28,3 +28,9 @@ bool hasNumber = someString.Any(char.IsNumber);
 bool allCapital = someString.All(char.IsUpper); // checks if all chars in string are uppercase
 bool allNumbers = someString.All(char.IsNumber);
 ```
+
+Useful built-in methods
+
+* `String.IsNullOrEmpty`
+* `String.ToCharArray`
+*  `Array.Reverse`
