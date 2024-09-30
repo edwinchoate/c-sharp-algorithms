@@ -34,3 +34,12 @@ Useful built-in methods
 * `String.IsNullOrEmpty`
 * `String.ToCharArray`
 *  `Array.Reverse`
+
+Using Linq to call a function for each item in an array:
+
+```C#
+int[] n1 = {1, 2, 3, 4};
+
+int[] n2 = n1.Select(n => n + 6).ToArray();
+// n2 contains {7, 8, 9, 10}
+```

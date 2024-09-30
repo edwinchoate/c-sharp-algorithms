@@ -1,12 +1,22 @@
 ﻿using System;
+using System.Linq;
 
 namespace Algorithms
 {
     class Program
     {
 
-        static String ReverseEachWord(String input) {
-            return "";
+        static String ReverseEachWord(String sentence) {
+            if (sentence == null) 
+                return null;
+            else if (sentence.Trim() == "")
+                return sentence;
+
+            string[] words = sentence.Trim().Split(" ");
+
+            string[] reversedWords = words.Select(Reverse).ToArray();
+
+            return String.Join(' ', reversedWords);
         }
 
         static String Reverse(String input) {
