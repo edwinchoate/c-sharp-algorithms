@@ -60,3 +60,14 @@ int[] evenNums = Array.FindAll(myArray, (n) => n % 2 == 0);
 ```C#
 Array.ForEach(someArray, Console.WriteLine);
 ```
+
+Binear Search
+
+* Assumption: the data structure is sorted 
+* Searchs runs in O(log(n)) time
+
+Linear Search
+
+* Assumption: none
+* Searchs run in O(n) time
+
