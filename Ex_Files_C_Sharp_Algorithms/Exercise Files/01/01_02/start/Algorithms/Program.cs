@@ -7,7 +7,14 @@ namespace Algorithms
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
+            Console.WriteLine(NormalizeString("  Hello, World  "));
+        }
+
+        static string NormalizeString (string s) 
+        {
+            return s.ToLower()
+                    .Replace(",", "")
+                    .Trim();
         }
     }
 }
