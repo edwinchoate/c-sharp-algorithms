@@ -43,3 +43,20 @@ int[] n1 = {1, 2, 3, 4};
 int[] n2 = n1.Select(n => n + 6).ToArray();
 // n2 contains {7, 8, 9, 10}
 ```
+
+## Ch. 2 Array Algorithms
+
+Searching for a value in an array
+
+```C#
+int[] myArray = {1, 2, 3, 4, 5, 6};
+
+int evenNum = Array.Find(myArray, (n) => n % 2 == 0); // returns the first match
+int[] evenNums = Array.FindAll(myArray, (n) => n % 2 == 0);
+```
+
+`Array` has a `ForEach` method that takes in a function to call, which is convenient: 
+
+```C#
+Array.ForEach(someArray, Console.WriteLine);
+```
