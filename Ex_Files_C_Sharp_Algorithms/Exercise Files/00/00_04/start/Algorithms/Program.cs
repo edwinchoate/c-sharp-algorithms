@@ -3,20 +3,28 @@
 namespace Algorithms {
 
     class Program {
-        static int findMaximum(int a, int b, int c) {
-            if (a > b) {
-                if (a > c || a == c) {
-                    return a;
-                }
-            }
+        // static int findMaximum(int a, int b, int c) {
+        //     if (a > b) {
+        //         if (a > c || a == c) {
+        //             return a;
+        //         }
+        //     }
 
-            if (b > c) {
-                if (b > a || a == b) {
-                    return b;
-                }
-            }
+        //     if (b > c) {
+        //         if (b > a || a == b) {
+        //             return b;
+        //         }
+        //     }
 
-            return c;
+        //     return c;
+        // }
+
+        static int findMaximum (int a, int b, int c) 
+        {
+            int max = a;
+            max = b > a ? b : a;
+            max = c > b ? c : b;
+            return max;
         }
 
         static void Main(string[] args) {
