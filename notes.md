@@ -83,3 +83,23 @@ Array.Sort(arr);
 Console.WriteLine(Array.BinarySearch(arr, 5));
 // Prints 4, the index of 5 in the sorted array
 ```
+
+### Sorting and Filtering
+
+Filtering an array based on some predicate:
+
+```C#
+int[] someArray = {...};
+List<int> evens = new List<int>(someArray);
+
+someArray = evens.Where(i => i % 2 == 0).ToArray();
+```
+
+Sorting an array based on some predicate: 
+
+```C#
+int[] someArray = {...};
+
+Array.Sort(someArray); // sorts in-place, based on default rules
+Array.Sort(someArray, (x, y) => y.CompareTo(x)); // sorts in-place, in reverse order of default
+```
