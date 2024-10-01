@@ -103,3 +103,8 @@ int[] someArray = {...};
 Array.Sort(someArray); // sorts in-place, based on default rules
 Array.Sort(someArray, (x, y) => y.CompareTo(x)); // sorts in-place, in reverse order of default
 ```
+
+## Ch. 3 Linked List Algorithms
+
+You can CTRL+Click/Cmd+Click on a .NET class and it opens up the cached .cs file of that class in VS Code!
+
