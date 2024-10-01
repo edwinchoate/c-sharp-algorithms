@@ -71,3 +71,15 @@ Linear Search
 * Assumption: none
 * Searchs run in O(n) time
 
+### Binary Search
+
+Using the built-in binary search method for arrays:
+
+```C#
+int[] arr = {0, 0, 5, 0, 0};
+
+Array.Sort(arr);
+
+Console.WriteLine(Array.BinarySearch(arr, 5));
+// Prints 4, the index of 5 in the sorted array
+```
