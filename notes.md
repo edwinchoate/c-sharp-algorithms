@@ -108,3 +108,19 @@ Array.Sort(someArray, (x, y) => y.CompareTo(x)); // sorts in-place, in reverse o
 
 You can CTRL+Click/Cmd+Click on a .NET class and it opens up the cached .cs file of that class in VS Code!
 
+One really cool technique for improving the efficiency of traversing a linked list in an algorithm is the technique of creating multiple points that traverse the list at different speeds. Example:
+
+```C#
+public void DeleteBackHalf () 
+{
+    Node slow = head, fast = head;
+
+    while (fast != null && fast.next != null) 
+    {
+        fast = fast.next.next;
+        slow = slow.next;
+    }
+
+    slow.next = null;
+}
+```
