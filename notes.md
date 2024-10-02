@@ -161,3 +161,24 @@ bool hasNext = someStack.TryPeek(out val);
 `Dictionary` - a key-value store that uses generics. Throws an error if you try to access a key that isn't present. Maintains the "stored" order of the entries.
 
 `HashTable` - a key-value store that, unlike `Dictionary`, does _not_ use generics. Returns `null` if you try to access a key that isn't present. Does _not_ maintain entries in "stored" order.
+
+> _For the dictionary, the keys are unique. For the hashset, each value is unique._
+
+`Dictionary` has a convenient try method, `TryGetValue`:
+
+```C#
+Employee employee;
+if (employeesDict.TryGetValue(53424424, out employee)) 
+{
+    Console.WriteLine(employee.Name);
+}
+```
+
+`HashSet` is useful if you just need a collection of keys. 
+
+```C#
+HashSet<string> productCodes = new HashSet<string>() {"34F24HJ", "36FD20J", "8D2FN2R"};
+
+Console.WriteLine(productCodes.Contains("34F24HJ")); // -> True
+Console.WriteLine(productCodes.Contains("99FD200")); // -> False
+```
