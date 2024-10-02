@@ -153,3 +153,11 @@ Similar to queues, calling `Peek()` on an empty stack raises an exception. Solut
 int val;  // Assuming type Stack<int>
 bool hasNext = someStack.TryPeek(out val);
 ```
+
+## Ch. 5 Algorithms for Hash-Based Structures 
+
+`HashSet` - a unordered collection of unique items. Ex: A set of Order Confirmation codes that have been used already. 
+
+`Dictionary` - a key-value store that uses generics. Throws an error if you try to access a key that isn't present. Maintains the "stored" order of the entries.
+
+`HashTable` - a key-value store that, unlike `Dictionary`, does _not_ use generics. Returns `null` if you try to access a key that isn't present. Does _not_ maintain entries in "stored" order.
