@@ -182,3 +182,25 @@ HashSet<string> productCodes = new HashSet<string>() {"34F24HJ", "36FD20J", "8D2
 Console.WriteLine(productCodes.Contains("34F24HJ")); // -> True
 Console.WriteLine(productCodes.Contains("99FD200")); // -> False
 ```
+
+`HashSet` is useful for keeping track of whether or not values have been "seen before": 
+
+```C#
+HashSet<int> set = new();
+
+int[] a = {1, 2, 3, 4};
+int[] b = {4, 5, 6, 7};
+
+foreach (int n in a)
+{
+    set.Add(n);
+} 
+
+bool containsRepeatedVal;
+
+foreach (int n in b)
+{
+    if (set.Contains(n))
+        containsRepeatedVal = true;
+}
+```
