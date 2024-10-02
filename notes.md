@@ -127,12 +127,12 @@ public void DeleteBackHalf ()
 
 ## Ch. 4 Queue and Stack Algorithms
 
-`Queue` lives in `System.Collections.Generics`
+`Queue` lives in `System.Collections.Generic`.
 
 Note: calling `Peek()` on an empty queue throws an `InvalidOperationException`. Solution: 
 
 ```C#
-bool anythingThere = someQueue.TryDequeue(out someInt);  // Assuming type Queue<int>
+bool hasNext = someQueue.TryDequeue(out someInt);  // Assuming type Queue<int>
 ```
 
 `TryDequeue` works well with while loops:
@@ -143,4 +143,13 @@ while (someQueue.TryDequeue(out val))
 {
     Console.WriteLine(val);
 }
+```
+
+`Stack` lives in `System.Collections.Generic`.
+
+Similar to queues, calling `Peek()` on an empty stack raises an exception. Solution: 
+
+```C#
+int val;  // Assuming type Stack<int>
+bool hasNext = someStack.TryPeek(out val);
 ```
