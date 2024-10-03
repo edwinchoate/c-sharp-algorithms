@@ -213,3 +213,4 @@ _tree_ - non-linear a data structure with a starting (root) node and subsequent 
 * _binary search tree (BST)_ - a binary tree with one additional constraint: the left child must be less than the parent node and the right child must be greater than the parent node. This makes the tree much faster to search. 
     * Best-case search: O(log(n))
     * Worst-case search: O(n). Because the tree isn't balanced, it's possible that you could essentially have, in the worst case, a linked list along one of the sides of the tree.
+    * Implementations of BSTs are similar to linked lists in that they use nodes
