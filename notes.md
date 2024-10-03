@@ -61,7 +61,7 @@ int[] evenNums = Array.FindAll(myArray, (n) => n % 2 == 0);
 Array.ForEach(someArray, Console.WriteLine);
 ```
 
-Binear Search
+Binary Search
 
 * Assumption: the data structure is sorted 
 * Searchs runs in O(log(n)) time
@@ -81,7 +81,7 @@ int[] arr = {0, 0, 5, 0, 0};
 Array.Sort(arr);
 
 Console.WriteLine(Array.BinarySearch(arr, 5));
-// Prints 4, the index of 5 in the sorted array
+// Prints 4, the index that contains the value 5 in the sorted array
 ```
 
 ### Sorting and Filtering
