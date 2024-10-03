@@ -214,3 +214,46 @@ _tree_ - non-linear a data structure with a starting (root) node and subsequent 
     * Best-case search: O(log(n))
     * Worst-case search: O(n). Because the tree isn't balanced, it's possible that you could essentially have, in the worst case, a linked list along one of the sides of the tree.
     * Implementations of BSTs are similar to linked lists in that they use nodes
+
+### Traversing Trees
+
+Binary trees lend themselves to recursion well, because of their nested, predictable structure.
+
+_In-order_ - recurse the left subtree, then check the root, then recurse the right subtree
+
+```C#
+void InOrderTraverse (Node root)
+{
+    if (root == null) return;
+
+    InOrderTraverse(root.Left);
+    Console.WriteLine(root.Data);
+    InOrderTraverse(root.Right); 
+}
+```
+
+_Pre-order_ - check the root, then recurse the left subtree, then recurse the right subtree
+
+```C#
+void PreOrderTraverse (Node root) 
+{
+    if (root == null) return;
+
+    Console.WriteLine(root.Data);
+    PreOrderTraverse(root.Left);
+    PreOrderTraverse(root.Right); 
+}
+```
+
+_Post-order_ -  recurse the left subtree, then recurse the right subtree, then check the root
+
+```C#
+void PostOrderTraverse (Node root)
+{
+    if (root == null) return;
+
+    PostOrderTraverse(root.Left);
+    PostOrderTraverse(root.Right); 
+    Console.WriteLine(root.Data);
+}
+```
