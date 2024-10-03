@@ -204,3 +204,12 @@ foreach (int n in b)
         containsRepeatedVal = true;
 }
 ```
+
+## Ch. 6 Tree Algorithms
+
+_tree_ - non-linear a data structure with a starting (root) node and subsequent layers of parent and child nodes. Thoe nodes are connected by links. 
+
+* _binary tree_ - a tree where each node has a max of 2 child nodes. These two child nodes are often called "left" and "right". The width of a binary tree has an upper bound of 2<sup># of levels</sup>.
+* _binary search tree (BST)_ - a binary tree with one additional constraint: the left child must be less than the parent node and the right child must be greater than the parent node. This makes the tree much faster to search. 
+    * Best-case search: O(log(n))
+    * Worst-case search: O(n). Because the tree isn't balanced, it's possible that you could essentially have, in the worst case, a linked list along one of the sides of the tree.
