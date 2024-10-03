@@ -257,3 +257,20 @@ void PostOrderTraverse (Node root)
     Console.WriteLine(root.Data);
 }
 ```
+
+Algorithm for finding the height of a binary tree using recursion:
+
+```C#
+int FindHeight (Node root)
+{
+    if (root == null) 
+        return 0;
+    else 
+    {
+        int leftSubtreeHeight = FindHeight(root.LeftChild);
+        int rightSubtreeHeight = FindHeight(root.RightChild);
+
+        return 1 + Math.max(leftSubtreeHeight, rightSubtreeHeight);
+    }
+}
+```
